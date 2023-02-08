@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(237, 218, 218);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    margin-top: 10vh;
+    background-color: white;
+}
+
+#display {
+    padding: 1rem 5rem;
+    margin: 2rem;
+    border: 1px solid gray;
+}
+
+button {
+    background-color: #ddd;
+    border: none;
+    padding: .2rem 2rem;
+    margin: 1rem;
+}
+
+button:active {
+    transform: scale(.98);
+    box-shadow: 0 0 1px 2px rgba(213, 125, 125, .5);
+}
+
+.b-rd {
+    border-radius: 5px;
+}

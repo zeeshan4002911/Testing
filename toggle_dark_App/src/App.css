@@ -1,0 +1,45 @@
+#main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ccc;
+}
+
+.toggle {
+    border: 1px solid white;
+    width: 50px;
+    cursor: pointer;
+    border-radius: 25px;
+    background: linear-gradient(rgb(1, 1, 40), rgb(107, 223, 255));
+}
+
+.dark {
+    float: right;
+}
+
+input {
+    margin: 10px auto;
+    width: 30vw;
+    padding: .5rem;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: .5rem 2rem;
+    border-radius: 25px;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 99vw;
+    }
+}

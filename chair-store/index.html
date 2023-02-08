@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cards</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <label for="card1">
+            <input type="checkbox" id="card1" />
+            <div class="card">
+                <div class="discount green">82%</div>
+                <div class="icon">
+                    <img src="./icons/eye-closed.png" alt="view-off">
+                </div>
+                <img src="./images/chair1.jpg" alt="product-1">
+                <p class="title">chair1</p>
+                <p class="model">MD321</p>
+            </div>
+        </label>
+        <label for="card2">
+            <input type="checkbox" id="card2" />
+            <div class="card">
+                <div class="discount green">63%</div>
+                <div class="icon">
+                    <img src="./icons/pencil.png" alt="edit">
+                </div>
+                <img src="./images/chair2.jpg" alt="product-2">
+                <p class="title">chair2</p>
+                <p class="model">MD322</p>
+            </div>
+        </label>
+        <label for="card3">
+            <input type="checkbox" id="card3" />
+            <div class="card">
+                <div class="discount yellow">40%</div>
+                <div class="icon">
+                    <img src="./icons/pencil.png" alt="edit">
+                </div>
+                <img src="./images/chair3.jpg" alt="product-3">
+                <p class="title">chair3</p>
+                <p class="model">MD323</p>
+            </div>
+        </label>
+        <label for="card4">
+            <input type="checkbox" id="card4" />
+            <div class="card">
+                <div class="discount green">75%</div>
+                <div class="icon">
+                    <img src="./icons/eye-open.png" alt="view-on">
+                </div>
+                <img src="./images/chair4.jpg" alt="product-4">
+                <p class="title">chair4</p>
+                <p class="model">MD324</p>
+            </div>
+        </label>
+        <label for="card5">
+            <input type="checkbox" id="card5" />
+            <div class="card">
+                <div class="discount red">15%</div>
+                <div class="icon">
+                    <img src="./icons/eye-open.png" alt="view-on">
+                </div>
+                <img src="./images/chair5.jpg" alt="product-5">
+                <p class="title">chair5</p>
+                <p class="model">MD325</p>
+            </div>
+        </label>
+        <label for="card6">
+            <input type="checkbox" id="card6" />
+            <div class="card">
+                <div class="discount red">10%</div>
+                <div class="icon">
+                    <img src="./icons/eye-closed.png" alt="eye-closed">
+                </div>
+                <img src="./images/chair6.jpg" alt="product-6">
+                <p class="title">chair6</p>
+                <p class="model">MD326</p>
+            </div>
+        </label>
+    </div>
+    <script>
+        function reset() {
+            const cards = document.querySelectorAll(".card");
+            for (let i = 0; i < cards.length; i++) {
+                cards[i].style.backgroundColor = "inherit";
+                if (cards[i].style.rotate == "-2.5deg") cards[i].style.rotate = "0deg"
+            }
+        }
+        function handleSelect(e, node) {
+            if (node.style.backgroundColor == "rgba(169, 201, 242, 0.3)") {
+                console.log("YO")
+                node.style.backgroundColor = "inherit";
+                node.style.rotate = "0deg";
+                return
+            }
+            reset();
+            node.style.backgroundColor = "rgba(169, 201, 242, 0.3)";
+            node.style.rotate = "-2.5deg";
+        }
+
+        const cards = document.querySelectorAll(".card");
+        for (let i = 0; i < cards.length; i++) {
+            cards[i].addEventListener("click", (e) => handleSelect(e, cards[i]));
+        }
+    </script>
+</body>
+
+</html>

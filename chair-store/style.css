@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 240, 240);
+}
+
+.container {
+    width: 70vw;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+    box-sizing: border-box;
+}
+
+.card {
+    display: inline-block;
+    width: 240px;
+    height: 300px;
+    margin: 20px;
+    padding: 20px;
+    position: relative;
+}
+
+.title {
+    font-weight: 600;
+    padding-top: 5px;
+}
+
+.model {
+    color: #777;
+}
+
+.card>img {
+    width: 200px;
+    height: 200px;
+}
+
+.icon {
+    width: 20px;
+    background-color: rgba(155, 210, 245, 0.5);
+    border-radius: 5px;
+    position: absolute;
+    z-index: 1;
+    margin: 10px;
+    padding: 3px 15px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon>img {
+    width: 15px;
+}
+
+.discount {
+    position: absolute;
+    z-index: 1;
+    margin: 10px;
+    padding: 2px 6px;
+    border-radius: 5px;
+}
+
+.green {
+    background-color: hsla(84, 100%, 59%, 0.8);
+}
+
+.yellow {
+    background-color: hsla(60, 100%, 43%, 0.8);
+}
+
+.red {
+    background-color: hsla(0, 76%, 67%, 0.8);
+}
+
+/* on Click JS mimic using CSS */
+input {
+    display: none;
+}
+
+/* #card1:checked+.card {
+    background-color: rgba(169, 201, 242, 0.3);
+    rotate: -2.5deg;
+}
+
+#card2:checked+.card {
+    background-color: rgba(169, 201, 242, 0.3);
+    rotate: -2.5deg;
+}
+
+#card3:checked+.card {
+    background-color: rgba(169, 201, 242, 0.3);
+    rotate: -2.5deg;
+}
+
+#card4:checked+.card {
+    background-color: rgba(169, 201, 242, 0.3);
+    rotate: -2.5deg;
+}
+
+#card5:checked+.card {
+    background-color: rgba(169, 201, 242, 0.3);
+    rotate: -2.5deg;
+}
+
+#card6:checked+.card {
+    background-color: rgba(169, 201, 242, 0.3);
+    rotate: -2.5deg;
+} */

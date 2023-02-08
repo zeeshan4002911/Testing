@@ -1,0 +1,47 @@
+:root {
+    --mainColor: rgba(179, 113, 185, 0.7);
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background-color: var(--mainColor);
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    margin: 0 auto;
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+.input-wrapper {
+    text-align: center;
+}
+
+input {
+    margin: 10px auto;
+    width: 30vw;
+    padding: .5rem;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+    border: 3px solid var(--mainColor);
+}
+
+button {
+    padding: .5rem 2rem;
+    border-radius: 25px;
+    margin: 20px;
+    background-color: var(--mainColor);
+}

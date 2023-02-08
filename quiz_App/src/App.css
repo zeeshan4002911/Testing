@@ -1,0 +1,44 @@
+#main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(150, 209, 255);
+}
+
+.container {
+    position: relative;
+    background-color: rgb(63, 73, 100);
+    width: 50vw;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 20px gray ;
+}
+
+input {
+    margin: 10px auto;
+    width: 30vw;
+    padding: .5rem;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    padding: .5rem 2rem;
+    border-radius: 25px;
+    margin: 20px;
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 99vw;
+    }
+}

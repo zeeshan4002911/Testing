@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="arrow" transform="translate(166 -323) rotate(90)">
+    <rect id="rectangle" width="20" height="20" transform="translate(323 166) rotate(-90)" fill="none"/>
+    <path id="path" d="M13.067,8.6,10,11.708,6.933,8.6,6,9.546,10,13.6l4-4.054Z" transform="translate(322.4 166) rotate(-90)" fill="#fff" fill-rule="evenodd"/>
+  </g>
+</svg>

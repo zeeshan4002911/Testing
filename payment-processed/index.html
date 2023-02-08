@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Status</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="root">
+        <form>
+            <div id="payment" class="card">
+                <h1 class="heading">Payment</h1>
+                <h2 class="sub-heading" style="margin-top: 10px">Complete your pro membership</h2>
+                <div class="grey-bg">
+                    <div class="botton-border">
+                        <span class="sub-heading" style="font-size: 28px;">&dollar; </span>
+                        <span class="heading">899 </span>
+                        <span style="color: #777;">USD</span>
+                    </div>
+                    <div style="width: 90%;">
+                        <div class="green-tick">
+                            <span>Messaging</span>
+                            <span style="float: right;">Analytics</span>
+                        </div>
+                        <div class="green-tick">
+                            <span>Support</span>
+                            <span style="float: right;">Discount</span>
+                        </div>
+                        <p class="know-more">Know more</p>
+                    </div>
+                </div>
+                <h5>Pay with card</h5>
+                <input type="text" name="card-number" id="cardNo">
+                <span style="display: flex; justify-content: space-between;">
+                    <input type="text" class="grey-input" placeholder="mm / yy">
+                    <input type="text" class="grey-input" placeholder="CCV">
+                </span>
+                <button id="submit">Make payment</button>
+            </div>
+            <div id="remove" class="card">
+                <h1 class="heading">Remove?</h1>
+                <p class="sub-heading">Please confirm these changes, you can't redo this again.</p>
+                <button id="confirm">confirm</button>
+                <a id="back">Take me back</a>
+            </div>
+            <div id="success" class="card">
+                <img src="./tick-white.svg" alt="tick" width="50px">
+                <h1 class="heading">Success</h1>
+                <p>Your payment was processed</p>
+            </div>
+            <div id="invoice" class="card">
+                <p style="right: 5%; position: absolute; color: blue;">Download</p>
+                <h1 class="heading" style="font-size: 22px;">Invoice</h1>
+                <div class="grey-bg">
+                    <div class="botton-border">
+                        <div>
+                            <span class="sub-heading">Pro membership</span>
+                            <span style="float: right;">&dollar;899</span>
+                        </div>
+                    </div>
+                    <div style="padding: 5px 0;">
+                        <span class="sub-heading">Platform fee</span>
+                        <span style="float: right;">&dollar;10</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="heading" style="font-size: 18px;">Total amount</span>
+                    <span style="float: right;" class="heading"><b>&dollar;909</b></span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script>
+        function handleSubmit(e, id) {
+            e.preventDefault();
+            console.log(id)
+            if (id === "back" && (document.getElementById("success").style.visibility != 'visible')) {
+                document.getElementById("remove").style.visibility = "hidden";
+            }
+            else if (id === "submit") {
+                document.getElementById("remove").style.visibility = "visible";
+            }
+            else {
+                document.getElementById("success").style.visibility = "visible";
+                setTimeout(() => {
+                    document.getElementById("invoice").style.visibility = "visible";
+                }, 2000)
+            }
+        }
+        document.getElementById("submit").addEventListener("click", (e) => handleSubmit(e, "submit"));
+        document.getElementById("confirm").addEventListener("click", (e) => handleSubmit(e, "confirm"));
+        document.getElementById("back").addEventListener("click", (e) => handleSubmit(e, "back"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+body {
+    background-color: #e27442;
+    font-family: monospace;
+    color: white;
+}
+
+#App {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+#add {
+    background-color: greenyellow;
+}
+
+main {
+    background-color: rgb(236, 148, 108);
+    width: 30vw;
+    padding: 2rem;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 20vw;
+    border-radius: 5px;
+}
+
+#list {
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.click {
+    width: 100%;
+    margin: 1rem auto;
+    padding: 0.25rem 0.5rem;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 14px;
+    background-color: #a05b3b;
+}
+
+.button {
+    font-size: larger;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    main {
+        width: 70vw;
+    }
+}
