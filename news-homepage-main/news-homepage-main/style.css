@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "inter-bold";
+    src: url(assets/fonts/static/Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: "inter-extrabold";
+    src: url(assets/fonts/static/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: "inter-regular";
+    src: url(assets/fonts/static/Inter-Regular.ttf);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "inter-regular";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    margin: 2rem 4rem;
+}
+
+#container>nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+#navigation>span {
+    margin: 0 1rem;
+}
+
+#navigation>span:hover {
+    color: #b8844a;
+    cursor: pointer;
+}
+
+#hero {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 8fr 4fr;
+    grid-template-rows: repeat(2, 50%);
+}
+
+#side-panel {
+    background-color: black;
+    color: #777;
+    padding: 5%;
+}
+
+.bottom-border {
+    border-bottom: 1px solid gray;
+}

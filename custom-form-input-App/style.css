@@ -1,0 +1,143 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.round-border {
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px gray;
+}
+
+.avatar {
+    border-radius: 50px;
+    border: 1px solid black;
+    margin: 5px;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin: 2rem;
+}
+
+nav ul {
+    display: flex;
+    column-gap: 1rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+#search {
+    background-color: #e0e0e0;
+    border: none;
+    padding: 0.5rem;
+}
+
+/* Calender css */
+
+.calendar {
+    width: 350px;
+    margin: 50px auto 0;
+}
+
+.calendar__month {
+    font-size: 20px;
+    font-weight: 800;
+    padding: 10px 0;
+    width: 100%;
+    position: relative;
+}
+
+.cal-month__previous,
+.cal-month__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+
+.cal-month__previous:hover,
+.cal-month__next:hover {
+    background-color: #42A5F5;
+    box-shadow: 0 5px 5px -5px rgba(0, 0, 0, 0.75);
+    border-radius: 50%;
+    font-weight: 800;
+    color: #111;
+}
+
+.cal-month__next {
+    right: 0;
+}
+
+.cal-month__current {
+    text-align: center;
+    color: #000000;
+}
+
+.cal-head__day,
+.cal-body__day {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.cal-body__week,
+.calendar__head {
+    display: block;
+    height: 50px;
+    width: 350px;
+}
+
+.calendar__head {
+    line-height: 50px;
+    position: relative;
+}
+
+.calendar__head:after {
+    content: ' ';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: #90CAF9;
+}
+
+.cal-body__day {
+    color: #777;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cal-day__month--current {
+    color: #000000;
+}
+
+.cal-day__day--today {
+    font-weight: 800;
+    color: #2196f3;
+}
+
+.cal-day__day--selected {
+    background-color: #2196f3;
+    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, .75);
+    border-radius: 50%;
+    color: #111;
+}
